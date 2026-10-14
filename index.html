@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Rum+Raisin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tutorías Académicas</title>
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio" class="nav-logo">TutorPar</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" aria-labelledby="titulo-inicio">
+      <div class="inicio-texto">
+        <h1 id="titulo-inicio">Tutorías Académicas</h1>
+        <p class="inicio-descripcion">Sesiones personalizadas, flexibles y completamente adaptadas al ritmo de cada estudiante. Aprende en el momento y lugar que mejor te funcione, con el acompañamiento de compañeros que ya dominaron el tema.</p>
+        <p class="inicio-frase">Supera tus exámenes con el apoyo de estudiantes avanzados.</p>
+        <a href="#agendar" class="btn-agendar">Agendar mi tutoría</a>
+      </div>
+      <figure class="inicio-imagen">
+        <img src="fotos/estudiantes-campusuni.png" alt="Grupo de estudiantes universitarios colaborando y estudiando juntos en el campus" width="800" loading="eager">
+      </figure>
+    </section>
+
+    <section id="como-funciona" aria-labelledby="titulo-como">
+      <div class="seccion-titulo"><h2 id="titulo-como">¿Cómo funciona?</h2></div>
+      <ol class="pasos-lista" aria-label="Pasos para agendar una tutoría">
+        <li class="paso">
+          <div class="paso-numero" aria-hidden="true">1</div>
+          <div class="paso-contenido">
+            <h3>Elige tu materia</h3>
+            <p>Busca la asignatura que necesitas reforzar en nuestro catálogo.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <div class="paso-numero" aria-hidden="true">2</div>
+          <div class="paso-contenido">
+            <h3>Selecciona horario</h3>
+            <p>Elige el día y la hora que mejor se adapten a tu rutina.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <div class="paso-numero" aria-hidden="true">3</div>
+          <div class="paso-contenido">
+            <h3>¡Listo!</h3>
+            <p>Recibe el enlace de Zoom o la ubicación de la sala en tu correo universitario.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="servicios" aria-labelledby="titulo-servicios">
+      <div class="servicios-cabecera">
+        <div class="seccion-titulo"><h2 id="titulo-servicios">Nuestros Servicios</h2></div>
+        <div class="filtro-wrapper">
+          <button class="filtro-btn" id="filtro-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Filtrar por modalidad">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Modalidad:&nbsp;<span class="filtro-sel" id="filtro-label">Todas</span>
+          </button>
+          <ul class="filtro-dropdown" id="filtro-dropdown" role="listbox" aria-label="Opciones de modalidad">
+            <li class="filtro-opcion activa" data-valor="todas" role="option" aria-selected="true">Todas</li>
+            <li class="filtro-opcion" data-valor="virtual" role="option" aria-selected="false">Virtuales</li>
+            <li class="filtro-opcion" data-valor="presencial" role="option" aria-selected="false">Presenciales</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="servicios-grid filtro-todas" id="servicios-grid">
+        <article class="card-materia" data-modalidad="virtual">
+          <img src="fotos/calculo.jpg" alt="Imagen de cálculo diferencial" width="100%" loading="eager">
+          <h3 class="card-nombre">Cálculo Diferencial</h3>
+          <span class="badge badge-virtual">Virtual</span>
+        </article>
+        <article class="card-materia" data-modalidad="virtual">
+          <img src="fotos/programacion.jpg" alt="Imagen de programación" width="100%" loading="eager">
+          <h3 class="card-nombre">Programación I</h3>
+          <span class="badge badge-virtual">Virtual</span>
+        </article>
+        <article class="card-materia" data-modalidad="virtual">
+          <img src="fotos/algebra-lineal.jpg" alt="Imagen de álgebra lineal" width="100%" loading="eager">
+          <h3 class="card-nombre">Álgebra Lineal</h3>
+          <span class="badge badge-virtual">Virtual</span>
+        </article>
+        <article class="card-materia" data-modalidad="virtual">
+          <img src="fotos/estadistica.avif" alt="Imagen de estadística" width="75%" loading="eager">
+          <h3 class="card-nombre">Estadística Aplicada</h3>
+          <span class="badge badge-virtual">Virtual</span>
+        </article>
+        <article class="card-materia" data-modalidad="virtual">
+          <img src="fotos/english.jpg" alt="Imagen de inglés" width="100%" loading="eager">
+          <h3 class="card-nombre">Inglés</h3>
+          <span class="badge badge-virtual">Virtual</span>
+        </article>
+        <article class="card-materia" data-modalidad="presencial">
+          <img src="fotos/fisica.jpg" alt="Imagen de física" width="100%" loading="eager">
+          <h3 class="card-nombre">Física General</h3>
+          <span class="badge badge-presencial">Presencial</span>
+        </article>
+        <article class="card-materia" data-modalidad="presencial">
+          <img src="fotos/quimica.jpg" alt="Imagen de química" width="80%" loading="eager">
+          <h3 class="card-nombre">Química Orgánica</h3>
+          <span class="badge badge-presencial">Presencial</span>
+        </article>
+        <article class="card-materia" data-modalidad="presencial">
+          <img src="fotos/contabilidad.jpg" alt="Imagen de contabilidad" width="100%" loading="eager">
+          <h3 class="card-nombre">Contabilidad Básica</h3>
+          <span class="badge badge-presencial">Presencial</span>
+        </article>
+        <article class="card-materia" data-modalidad="presencial">
+          <img src="fotos/biologia.jpg" alt="Imagen de biología" width="80%" loading="eager">
+          <h3 class="card-nombre">Biología Celular</h3>
+          <span class="badge badge-presencial">Presencial</span>
+        </article>
+        <article class="card-materia" data-modalidad="presencial">
+          <img src="fotos/economia.jpg" alt="Imagen de economía" width="80%" loading="eager">
+          <h3 class="card-nombre">Economía General</h3>
+          <span class="badge badge-presencial">Presencial</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="agendar" aria-labelledby="titulo-agendar">
+      <div class="agendar-inner">
+        <div class="seccion-titulo"><h2 id="titulo-agendar">Agenda tu Tutoría</h2></div>
+        <p class="agendar-subtitulo">Completa el formulario y nos pondremos en contacto para confirmar tu sesión.</p>
+        <div class="form-exito" id="form-exito" role="alert" aria-live="polite" tabindex="-1">¡Solicitud enviada con éxito! Nos comunicaremos contigo pronto.</div>
+
+        <form id="form-agendar" novalidate>
+          <div class="form-grupo">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. María González" autocomplete="name" aria-describedby="nombre-error" required>
+            <span class="form-error" id="nombre-error" role="alert">Ingresa tu nombre y al menos un apellido.</span>
+          </div>
+          <div class="form-grupo">
+            <label for="correo">Correo institucional</label>
+            <input type="email" id="correo" name="correo" placeholder="usuario@universidad.edu" autocomplete="email" aria-describedby="correo-error" required>
+            <span class="form-error" id="correo-error" role="alert">Ingresa un correo institucional válido (Ej. usuario@universidad.edu.ec).</span>
+          </div>
+          <div class="form-grupo">
+            <label for="materia">Materia</label>
+            <select id="materia" name="materia" aria-describedby="materia-error" required>
+              <option value="" disabled selected>Selecciona una materia</option>
+              <optgroup label="Virtual">
+                <option value="calculo">Cálculo Diferencial</option>
+                <option value="programacion">Programación I</option>
+                <option value="algebra">Álgebra Lineal</option>
+                <option value="estadistica">Estadística Aplicada</option>
+                <option value="ingles">Inglés Técnico</option>
+              </optgroup>
+              <optgroup label="Presencial">
+                <option value="fisica">Física General</option>
+                <option value="quimica">Química Orgánica</option>
+                <option value="contabilidad">Contabilidad Básica</option>
+                <option value="biologia">Biología Celular</option>
+                <option value="economia">Economía General</option>
+              </optgroup>
+            </select>
+            <span class="form-error" id="materia-error" role="alert">Selecciona la materia que deseas reforzar.</span>
+          </div>
+          <div class="form-fecha-row">
+            <div class="form-grupo">
+              <label for="fecha-dia">Fecha preferida</label>
+              <input type="date" id="fecha-dia" name="fecha-dia" aria-describedby="fecha-dia-error" required>
+              <span class="form-error" id="fecha-dia-error" role="alert">Selecciona una fecha a partir de hoy.</span>
+            </div>
+            <div class="form-grupo">
+              <label for="fecha-hora">Horario</label>
+              <select id="fecha-hora" name="fecha-hora" aria-describedby="fecha-hora-error" required>
+                <option value="" disabled selected>Elige un horario</option>
+                <option value="08:00">8:00 a.m.</option>
+                <option value="10:00">10:00 a.m.</option>
+                <option value="13:00">1:00 p.m.</option>
+                <option value="16:00">4:00 p.m.</option>
+                <option value="18:00">6:00 p.m.</option>
+              </select>
+              <span class="form-error" id="fecha-hora-error" role="alert">Selecciona un horario disponible.</span>
+            </div>
+          </div>
+          <div class="form-grupo">
+            <label for="comentarios">Comentarios <span class="label-opcional">(opcional)</span></label>
+            <textarea id="comentarios" name="comentarios" placeholder="Temas específicos a reforzar, dudas puntuales, etc."></textarea>
+          </div>
+          <button type="submit" class="btn-enviar">Confirmar Reserva</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
